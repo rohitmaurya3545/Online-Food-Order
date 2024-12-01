@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="styles.css" as="style">
+</head>
+<body>
+    <div id="app">
+        <div id="login" class="form">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="main-content" style="display: none;">
+            <header>
+                <div class="text-container">
+                    <h1>𝑶𝒏𝒍𝒊𝒏𝒆 𝑭𝒐𝒐𝒅 𝑶𝒓𝒅𝒆𝒓 &trade;</h1>
+                </div>
+            </header>
+            <div class="search-bar-container">
+                <input type="text" id="search-bar" placeholder="Search for delicious food...">
+                <button id="search-button">
+                    <img src="img/search.png" alt="Search" />
+                </button>
+            </div>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="food-item">
+                <p><img src="img/burger.jpg" alt="Burger" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Burger - ₹300</p>
+                <div>
+                    <button onclick="addToOrder('Burger', 300)">Add to Order</button>
+                    <button onclick="addToWishlist('Burger')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/rasgullla.jpg" alt="Rasgulla" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Rasgulla - ₹340</p>
+                <div>
+                    <button onclick="addToOrder('Rasgulla', 340)">Add to Order</button>
+                    <button onclick="addToWishlist('Rasgulla')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/dalchawal.jpeg" alt="Daal Chawal" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Daal Chawal - ₹100</p>
+                <div>
+                    <button onclick="addToOrder('Daal Chawal', 100)">Add to Order</button>
+                    <button onclick="addToWishlist('Daal Chawal')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/dosa.jpeg" alt="Dosa" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Dosa - ₹50</p>
+                <div>
+                    <button onclick="addToOrder('Dosa', 50)">Add to Order</button>
+                    <button onclick="addToWishlist('Dosa')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/pizza.jpg" alt="Pizza" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Pizza - ₹500</p>
+                <div>
+                    <button onclick="addToOrder('Pizza', 500)">Add to Order</button>
+                    <button onclick="addToWishlist('Pizza')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/pasta.jpg" alt="Pasta" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Pasta - ₹400</p>
+                <div>
+                    <button onclick="addToOrder('Pasta', 400)">Add to Order</button>
+                    <button onclick="addToWishlist('Pasta')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/sushi.jpg" alt="Sushi" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Sushi - ₹900</p>
+                <div>
+                    <button onclick="addToOrder('Sushi', 900)">Add to Order</button>
+                    <button onclick="addToWishlist('Sushi')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/salad.jpg" alt="Salad" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Salad - ₹350</p>
+                <div>
+                    <button onclick="addToOrder('Salad', 350)">Add to Order</button>
+                    <button onclick="addToWishlist('Salad')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/sandwich.jpeg" alt="Sandwich" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Sandwich - ₹250</p>
+                <div>
+                    <button onclick="addToOrder('Sandwich', 250)">Add to Order</button>
+                    <button onclick="addToWishlist('Sandwich')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/fries.jpg" alt="Fries" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Fries - ₹150</p>
+                <div>
+                    <button onclick="addToOrder('Fries', 150)">Add to Order</button>
+                    <button onclick="addToWishlist('Fries')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/icecream.jpg" alt="Ice Cream" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Ice Cream - ₹200</p>
+                <div>
+                    <button onclick="addToOrder('Ice Cream', 200)">Add to Order</button>
+                    <button onclick="addToWishlist('Ice Cream')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/chocolatecake.jpg" alt="Chocolate Cake" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Chocolate Cake - ₹400</p>
+                <div>
+                    <button onclick="addToOrder('Chocolate Cake', 400)">Add to Order</button>
+                    <button onclick="addToWishlist('Chocolate Cake')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p><img src="img/fruittart.jpg" alt="Fruit Tart" style="width:50px; height:50px; margin-right:10px;" loading="lazy"> Fruit Tart - ₹350</p>
+                <div>
+                    <button onclick="addToOrder('Fruit Tart', 350)">Add to Order</button>
+                    <button onclick="addToWishlist('Fruit Tart')">Add to Wishlist</button>
+                </div>
+            </div>
+        </section>
+        <section id="order-summary">
+            <div style="display: flex; align-items: center;">
+                <h2>Order Summary</h2>
+                <img src="img/ordersummary.png" alt="Order Summary" style="width: 80px; height: 80px; margin-right: 10px;" loading="lazy">
+            </div>
+            <ul id="order-list"></ul>
+            <p>Total: ₹<span id="total-price">0</span></p>
+            <button onclick="previewOrder()">Preview Order</button>
+        </section>
+        <section id="wishlist">
+            <div style="display: flex; align-items: center;">
+                <h2>Wishlist</h2>
+                <img src="img/wishlist1.png" alt="WishList" style="width: 80px; height: 80px; margin-right: 10px;" loading="lazy">
+            </div>
+            <ul id="wishlist-list"></ul>
+        </section>
+        <section id="order-preview" style="display:none;">
+            <div style="display: flex; align-items: center;">
+                <h2>Order Preview</h2>
+                <img src="img/ordernow.png" alt="Order Preview" style="width: 80px; height: 80px; margin-right: 10px;" loading="lazy">
+            </div>
+            <ul id="preview-list"></ul>
+            <p>Total: <strong>₹<span id="preview-total-price">0</span></strong></p>
+            <p><strong>Your order will be delivered within 5 days.</strong></p>
+            <p><strong>Delivery Address: <span id="preview-address"></span></strong></p>
+            <button onclick="placeOrder()">Place Order</button>
+        </section>
+        <section id="address">
+            <div style="display: flex; align-items: center;">
+                <h2>Delivery Address</h2>
+                <img src="img/delivery.jpg" alt="Delivery" style="width: 100px; height: 100px; margin-right: 10px;" loading="lazy">
+            </div>
+            <textarea id="address-text" placeholder="Enter your delivery address here..."></textarea>
+        </section>
+        <section id="feedback">
+            <div style="display: flex; align-items: center;">
+                <h2>User Feedback</h2>
+                <img src="img/feedback.png" alt="Feedback" style="width: 80px; height: 80px; margin-right: 10px;" loading="lazy">
+            </div>
+            <textarea id="feedback-text" placeholder="Enter your feedback here..."></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+            <ul id="feedback-list"></ul>
+        </section>
+    </main>
+    <footer class="ftco-footer ftco-section">
+        <div class="container" style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Rohit Kumar Maurya</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js" defer></script>
+</body>
+</html>
